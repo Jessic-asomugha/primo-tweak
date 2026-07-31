@@ -40,7 +40,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
               <span className="font-display text-2xl font-bold tracking-tight text-brand-dark">
                 Primo<span className="text-brand-accent">.</span>
               </span>
-              <span className="block text-[8px] font-semibold tracking-widest text-brand-muted uppercase -mt-1">
+              <span className="block text-[10px] font-semibold tracking-widest text-brand-muted uppercase -mt-1">
                 Primo Energy Oil & Gas Co. Limited
               </span>
             </div>

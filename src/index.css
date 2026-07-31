@@ -12,23 +12,43 @@
   --color-brand-muted: #222222;
 }
 
-/* Custom scrollbar and premium design details */
+/* Base rendering polish for a crisp, corporate feel */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+}
+
+/* Clean, understated scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #003366;
+  background: #eef2f7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 4px;
+  background: #94a3b8;
+  border-radius: 9999px;
+  border: 2px solid #eef2f7;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8962E;
+  background: #003366;
+}
+
+/* Tasteful keyboard focus ring in the brand accent */
+:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+  border-radius: 3px;
 }
 
 .font-display {
   font-family: var(--font-display);
 }
-

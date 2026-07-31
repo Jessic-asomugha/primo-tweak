@@ -37,7 +37,7 @@ export default function Footer({ onNav }: FooterProps) {
                 <span className="font-display text-2xl font-bold tracking-tight text-white">
                   primo<span className="text-brand-accent">.</span>
                 </span>
-                <span className="block text-[8px] font-semibold tracking-widest text-gray-400 uppercase -mt-1">
+                <span className="block text-[10px] font-semibold tracking-widest text-gray-400 uppercase -mt-1">
                   Reliable Energy Solutions. Delivered with Excellence.
                 </span>
               </div>

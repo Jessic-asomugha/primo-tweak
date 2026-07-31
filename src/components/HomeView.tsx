@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ChevronRight, ArrowRight, Compass, Factory, Truck, Zap, CheckCircle2, Star, Quote, Flame, ShieldCheck, Award, Building2 } from 'lucide-react';
+import { ChevronRight, ArrowRight, Compass, Factory, Truck, Zap, CircleCheck as CheckCircle2, Star, Quote, Flame, ShieldCheck, Award, Building2 } from 'lucide-react';
 import { SERVICES_DATA, ACCOMPLISHMENTS_DATA, TESTIMONIALS_DATA } from '../data';
 
 interface HomeViewProps {
@@ -103,7 +103,7 @@ export default function HomeView({
         </div>
 
         {/* Small Ribbon/Feature Bar at the very bottom right of the hero */}
-        <div className="absolute bottom-0 right-0 left-0 lg:left-1/2 bg-brand-dark text-white py-4 z-25 overflow-hidden border-t border-white/10">
+        <div className="absolute bottom-0 right-0 left-0 lg:left-1/2 bg-brand-dark text-white py-4 z-20 overflow-hidden border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 flex flex-wrap gap-x-8 gap-y-2 text-xs font-mono font-medium tracking-wider text-gray-300">
             <span className="flex items-center gap-1 text-brand-accent">✦ Diesel Supply</span>
             <span className="flex items-center gap-1">✦ Petroleum Products</span>
