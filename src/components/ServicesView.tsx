@@ -72,8 +72,8 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 text-xs font-semibold rounded-lg border transition-all ${
                 selectedCategory === cat.id
-                  ? 'bg-brand-dark text-white border-brand-dark shadow-xs'
-                  : 'bg-white text-brand-dark/70 border-gray-200 hover:text-brand-accent hover:border-brand-accent/20'
+                  ? 'bg-brand-dark text-white border-brand-dark shadow-md'
+                  : 'bg-white text-brand-dark/70 border-gray-200 hover:text-brand-accent hover:border-brand-accent/30 hover:shadow-sm'
               }`}
             >
               {cat.label}
@@ -94,7 +94,7 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
                 <div 
                   key={service.id} 
                   className={`rounded-xl border bg-white overflow-hidden transition-all duration-300 ${
-                    isActive ? 'border-brand-accent shadow-sm' : 'border-gray-100 hover:border-gray-200 shadow-2xs'
+                    isActive ? 'border-brand-accent shadow-lg ring-1 ring-brand-accent/10' : 'border-gray-100 hover:border-gray-200 shadow-sm hover:shadow-md'
                   }`}
                 >
                   {/* Summary Header */}

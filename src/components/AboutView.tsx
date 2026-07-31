@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Shield, Eye, Target, Award, HardHat, Building2, Globe2 } from 'lucide-react';
+import { Shield, Eye, Target, Award, HardHat, Building2, Globe as Globe2 } from 'lucide-react';
 
 interface AboutViewProps {
   onRequestQuote: () => void;
@@ -107,7 +107,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeInVariants}
-              className="p-8 rounded-xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-md transition-shadow duration-300"
+              className="p-8 rounded-xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-lg hover:-translate-y-1 hover:border-brand-accent/20 transition-all duration-300"
             >
               <div className="h-12 w-12 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
                 <Target className="h-6 w-6" />
@@ -124,7 +124,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeInVariants}
-              className="p-8 rounded-xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-md transition-shadow duration-300"
+              className="p-8 rounded-xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-lg hover:-translate-y-1 hover:border-brand-accent/20 transition-all duration-300"
             >
               <div className="h-12 w-12 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
                 <Eye className="h-6 w-6" />
@@ -141,7 +141,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={fadeInVariants}
-              className="p-8 rounded-xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-md transition-shadow duration-300"
+              className="p-8 rounded-xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-lg hover:-translate-y-1 hover:border-brand-accent/20 transition-all duration-300"
             >
               <div className="h-12 w-12 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent">
                 <Shield className="h-6 w-6" />
@@ -207,7 +207,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-xs hover:shadow-md transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   <div className="h-64 overflow-hidden bg-gray-100 relative">
@@ -232,7 +232,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
           <div className="text-center mt-12">
             <button
               onClick={onRequestQuote}
-              className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3.5 px-8 rounded-lg text-xs uppercase tracking-wider transition shadow-sm hover:shadow-md"
+              className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3.5 px-8 rounded-lg text-xs uppercase tracking-wider transition shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
             >
               Request a Quote
             </button>

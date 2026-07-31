@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, Phone, Mail, ArrowLeft, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowLeft, Send, CircleCheck as CheckCircle } from 'lucide-react';
 
 interface ContactViewProps {
   onBackToHome: () => void;
@@ -156,7 +156,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
 
             {/* Right Column: Form */}
-            <div className="lg:col-span-7 bg-brand-light rounded-xl p-8 border border-gray-100 shadow-2xs">
+            <div className="lg:col-span-7 bg-brand-light rounded-2xl p-8 border border-gray-100 shadow-sm">
               <AnimatePresence mode="wait">
                 {!submitted ? (
                   <motion.form 
@@ -179,7 +179,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                           value={formData.firstName}
                           onChange={handleChange}
                           placeholder="John"
-                          className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent transition"
+                          className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                         />
                       </div>
                       <div>
@@ -193,7 +193,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                           value={formData.lastName}
                           onChange={handleChange}
                           placeholder="Doe"
-                          className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent transition"
+                          className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                         />
                       </div>
                     </div>
@@ -209,7 +209,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="j.doe@logistics.com"
-                        className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
 
@@ -238,7 +238,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Tell us about your energy needs..."
-                        className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent transition resize-none"
+                        className="w-full rounded-lg bg-white border border-gray-200 px-3.5 py-2.5 text-xs text-brand-dark focus:outline-hidden focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition resize-none"
                       />
                     </div>
 
@@ -246,7 +246,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-brand-accent hover:bg-brand-accent-hover disabled:opacity-50 text-white font-bold py-3 px-6 rounded-lg text-xs uppercase tracking-widest transition flex items-center justify-center gap-2"
+                        className="w-full bg-brand-accent hover:bg-brand-accent-hover disabled:opacity-50 text-white font-bold py-3 px-6 rounded-lg text-xs uppercase tracking-widest hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                       >
                         {isSubmitting ? (
                           <>

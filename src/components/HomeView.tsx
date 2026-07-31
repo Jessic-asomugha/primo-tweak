@@ -86,14 +86,14 @@ export default function HomeView({
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
                   onClick={onRequestQuote}
-                  className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-4 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-center flex items-center justify-center gap-2 group text-sm"
+                  className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-4 px-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-center flex items-center justify-center gap-2 group text-sm"
                 >
                   Request a Quote
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={onNavigateToAbout}
-                  className="bg-brand-dark hover:bg-black text-white font-semibold py-4 px-8 rounded-lg transition text-center text-sm"
+                  className="bg-brand-dark hover:bg-black text-white font-semibold py-4 px-8 rounded-lg hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-center text-sm"
                 >
                   Learn More
                 </button>
@@ -151,7 +151,7 @@ export default function HomeView({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.15 }}
-                className="relative group p-6 rounded-xl bg-white/5 border border-white/5 hover:border-brand-accent/30 transition-all duration-300"
+                className="relative group p-6 rounded-xl bg-white/5 border border-white/5 hover:border-brand-accent/40 hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Watermark number */}
                 <div className="absolute -top-6 right-4 text-7xl font-display font-bold text-white/[0.03] select-none group-hover:text-brand-accent/[0.08] transition-colors duration-300">
@@ -280,7 +280,7 @@ export default function HomeView({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-8 border border-gray-100 shadow-xs hover:shadow-md hover:border-brand-accent/20 transition-all duration-300 flex flex-col justify-between"
+                  className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-brand-accent/30 transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
                     <div className="h-12 w-12 rounded-lg bg-brand-light flex items-center justify-center text-brand-accent mb-6">
@@ -309,7 +309,7 @@ export default function HomeView({
           <div className="text-center mt-12">
             <button
               onClick={onNavigateToServices}
-              className="inline-flex items-center gap-2 bg-brand-dark hover:bg-black text-white px-7 py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition"
+              className="inline-flex items-center gap-2 bg-brand-dark hover:bg-black text-white px-7 py-3 rounded-lg text-xs font-bold tracking-wider uppercase hover:shadow-lg active:scale-[0.98] transition-all"
             >
               View All Services
               <ChevronRight className="h-4 w-4" />
@@ -409,7 +409,7 @@ export default function HomeView({
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="group overflow-hidden rounded-xl border border-gray-100 shadow-xs hover:shadow-md transition"
+                className="group overflow-hidden rounded-xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden bg-gray-100">
                   <img 
@@ -463,7 +463,7 @@ export default function HomeView({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="rounded-xl p-8 transition-all duration-300 border relative bg-white/5 border-white/5 hover:border-white/15"
+                className="rounded-xl p-8 transition-all duration-300 border relative bg-white/5 border-white/5 hover:border-white/20 hover:-translate-y-1"
               >
                 <Quote className="absolute top-6 right-6 h-8 w-8 text-brand-accent/20" />
                 
