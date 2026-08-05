@@ -51,7 +51,7 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
       <section className="relative py-20 bg-brand-darker text-white overflow-hidden bg-grain">
         <div className="absolute inset-0 opacity-25">
           <img
-            src="https://images.pexels.com/photos/31403876/pexels-photo-31403876.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/trusted-industry-partner.jpg"
             alt="Industrial storage tanks"
             className="w-full h-full object-cover"
           />

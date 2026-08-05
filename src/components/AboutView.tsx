@@ -12,25 +12,25 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
       name: 'Oil & Gas',
       role: 'Energy Sector',
       desc: 'Providing reliable fuel supply for upstream and downstream operations across the Nigerian energy industry.',
-      imageUrl: 'https://images.pexels.com/photos/3192662/pexels-photo-3192662.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      imageUrl: '/hero-imge.jpg',
     },
     {
       name: 'Construction',
       role: 'Infrastructure Development',
       desc: 'Powering construction sites with dependable diesel and petroleum products for heavy machinery and equipment.',
-      imageUrl: 'https://images.pexels.com/photos/35846752/pexels-photo-35846752.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      imageUrl: '/construction.jpg',
     },
     {
       name: 'Manufacturing',
       role: 'Industrial Production',
       desc: 'Ensuring uninterrupted operations for manufacturing industries with consistent fuel supply and logistics.',
-      imageUrl: 'https://images.pexels.com/photos/34221997/pexels-photo-34221997.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      imageUrl: '/manufacturing.jpg',
     },
     {
       name: 'Healthcare',
       role: 'Medical Facilities',
       desc: 'Supporting hospitals and healthcare institutions with reliable energy solutions for critical medical services.',
-      imageUrl: 'https://images.pexels.com/photos/29948395/pexels-photo-29948395.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      imageUrl: '/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg',
     },
   ];
 
@@ -67,7 +67,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
       <section className="relative py-24 bg-brand-darker text-white overflow-hidden bg-grain">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/15973758/pexels-photo-15973758.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg"
             alt="Offshore oil rig at sunset"
             className="w-full h-full object-cover"
           />

@@ -49,7 +49,7 @@ export const ACCOMPLISHMENTS_DATA: Accomplishment[] = [
     title: 'CAC Registration & Incorporation',
     description: 'Officially incorporated under the Corporate Affairs Commission (CAC) with registration number 7830522, establishing Primo Energy as a licensed Nigerian company.',
     location: 'Abuja, Federal Capital Territory, Nigeria',
-    imageUrl: 'https://images.pexels.com/photos/32399139/pexels-photo-32399139.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageUrl: '/CAC_-registered.jpg',
     year: '2024'
   },
   {
@@ -57,7 +57,7 @@ export const ACCOMPLISHMENTS_DATA: Accomplishment[] = [
     title: 'Multi-State Service Coverage',
     description: 'Expanded operations to cover Abuja (FCT), Kaduna, Nasarawa, Niger State, and Kogi, providing reliable energy solutions across Northern Nigeria.',
     location: 'Northern Nigeria Region',
-    imageUrl: 'https://images.pexels.com/photos/36228061/pexels-photo-36228061.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageUrl: '/multistate-coverage.jpg',
     year: '2024'
   },
   {
@@ -65,7 +65,7 @@ export const ACCOMPLISHMENTS_DATA: Accomplishment[] = [
     title: 'Trusted Industry Partner',
     description: 'Established as a preferred supplier for construction companies, manufacturing industries, hospitals, schools, and government agencies through consistent quality delivery.',
     location: 'Nigeria',
-    imageUrl: 'https://images.pexels.com/photos/5884386/pexels-photo-5884386.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    imageUrl: '/manufacturing.jpg',
     year: '2024'
   }
 ];

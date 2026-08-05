@@ -50,8 +50,8 @@ export default function HomeView({
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/10386893/pexels-photo-10386893.jpeg?auto=compress&cs=tinysrgb&h=1080&w=1920"
-            alt="Illuminated oil refinery at night"
+            src="/hero-imge.jpg"
+            alt="Primo Energy industrial facility"
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-darker via-brand-darker/90 to-brand-darker/40" />
@@ -177,7 +177,7 @@ export default function HomeView({
               <div className="absolute -top-6 -left-6 w-28 h-28 bg-brand-accent/10 -z-10 rounded-2xl" />
               <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
                 <img
-                  src="https://images.pexels.com/photos/15893881/pexels-photo-15893881.jpeg?auto=compress&cs=tinysrgb&h=800&w=600"
+                  src="/our-mission-on-the-home-page.jpg"
                   alt="Petroleum refinery towers at dusk"
                   className="w-full h-[440px] object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -345,7 +345,7 @@ export default function HomeView({
             >
               <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-200">
                 <img
-                  src="https://images.pexels.com/photos/37793901/pexels-photo-37793901.jpeg?auto=compress&cs=tinysrgb&h=800&w=600"
+                  src="/why-choose-us.jpg"
                   alt="Engineers inspecting industrial pipelines"
                   className="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -518,7 +518,7 @@ export default function HomeView({
               <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-brand-accent/15 -z-10 rounded-2xl" />
               <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
                 <img
-                  src="https://images.pexels.com/photos/10752598/pexels-photo-10752598.jpeg?auto=compress&cs=tinysrgb&h=800&w=600"
+                  src="/trusted-industry-partner.jpg"
                   alt="Industrial buildings by the sea"
                   className="w-full h-[440px] object-cover hover:scale-105 transition-transform duration-700"
                 />

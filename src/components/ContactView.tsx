@@ -70,7 +70,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
       <section className="relative py-20 bg-brand-darker text-white overflow-hidden bg-grain">
         <div className="absolute inset-0 opacity-20">
           <img
-            src="https://images.pexels.com/photos/11139595/pexels-photo-11139595.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/trusted-industry-partner.jpg"
             alt="Offshore oil platform"
             className="w-full h-full object-cover"
           />
