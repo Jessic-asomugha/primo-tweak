@@ -5,6 +5,7 @@ export interface Service {
   longDescription: string;
   iconName: string;
   category: 'supply' | 'logistics' | 'consulting';
+  imageUrl: string;
 }
 
 export interface Accomplishment {
