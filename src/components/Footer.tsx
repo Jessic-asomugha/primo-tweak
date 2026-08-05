@@ -1,7 +1,6 @@
 import React from 'react';
 import { Flame, Check, Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
 
-// Lucide doesn't ship a TikTok icon, so a small inline brand mark is used instead.
 function TikTokIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -23,87 +22,74 @@ export default function Footer({ onNav }: FooterProps) {
   };
 
   return (
-    <footer className="bg-brand-dark text-white pt-16 pb-12 border-t border-white/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          
+    <footer className="bg-brand-darker text-white pt-20 pb-10 relative overflow-hidden bg-grain">
+      {/* Top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 accent-bar" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-14 md:grid-cols-3">
+
           {/* Column 1: Company Profile */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => handleLinkClick('home')}>
-              <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-brand-accent">
+          <div className="space-y-5">
+            <div className="flex items-center gap-3 cursor-pointer group" onClick={() => handleLinkClick('home')}>
+              <div className="flex items-center justify-center h-11 w-11 rounded-xl bg-brand-accent group-hover:scale-105 transition-transform">
                 <Flame className="h-5 w-5 text-white" />
               </div>
               <div>
                 <span className="font-display text-2xl font-bold tracking-tight text-white">
                   primo<span className="text-brand-accent">.</span>
                 </span>
-                <span className="block text-[10px] font-semibold tracking-widest text-gray-400 uppercase -mt-1">
-                  Reliable Energy Solutions. Delivered with Excellence.
+                <span className="block text-[9px] font-semibold tracking-[0.18em] text-gray-400 uppercase -mt-0.5">
+                  Energy Oil &amp; Gas Co. Ltd
                 </span>
               </div>
             </div>
-            
+
             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-              Primo Energy Oil & Gas Co. Limited is a Nigerian energy company committed to delivering high-quality petroleum products and energy solutions to businesses, industries, institutions, and households.
+              Primo Energy Oil &amp; Gas Co. Limited is a Nigerian energy company committed to delivering high-quality petroleum products and energy solutions to businesses, industries, institutions, and households.
             </p>
 
             <div className="pt-2 text-xs text-gray-500">
-              &copy; {currentYear} Primo Energy Oil & Gas Co. Limited. All rights reserved.
-              <span className="block mt-1">CAC Registration No: 7830522</span>
+              &copy; {currentYear} Primo Energy Oil &amp; Gas Co. Limited. All rights reserved.
+              <span className="block mt-1 font-mono">CAC Registration No: 7830522</span>
             </div>
           </div>
 
-          {/* Column 2: Quick Navigations & Checklists */}
-          <div className="space-y-4">
-            <h3 className="font-display text-base font-bold uppercase tracking-wider text-white border-b border-white/10 pb-2">
+          {/* Column 2: Quick Navigations */}
+          <div className="space-y-5">
+            <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white border-b border-white/10 pb-3">
               Navigations
             </h3>
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2.5">
-                <button 
-                  onClick={() => handleLinkClick('home')} 
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-brand-accent transition text-left"
-                >
-                  <Check className="h-3.5 w-3.5 text-brand-accent" />
-                  Home Page
-                </button>
-                <button 
-                  onClick={() => handleLinkClick('services')} 
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-brand-accent transition text-left"
-                >
-                  <Check className="h-3.5 w-3.5 text-brand-accent" />
-                  Services Index
-                </button>
-                <button 
-                  onClick={() => handleLinkClick('about')} 
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-brand-accent transition text-left"
-                >
-                  <Check className="h-3.5 w-3.5 text-brand-accent" />
-                  About Our Fleet
-                </button>
-                <button 
-                  onClick={() => handleLinkClick('contact')} 
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-brand-accent transition text-left"
-                >
-                  <Check className="h-3.5 w-3.5 text-brand-accent" />
-                  Contact Desk
-                </button>
+              <div className="space-y-3">
+                {[
+                  { label: 'Home Page', page: 'home' as const },
+                  { label: 'Services Index', page: 'services' as const },
+                  { label: 'About Our Fleet', page: 'about' as const },
+                  { label: 'Contact Desk', page: 'contact' as const },
+                ].map((link) => (
+                  <button
+                    key={link.label}
+                    onClick={() => handleLinkClick(link.page)}
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-brand-accent transition text-left"
+                  >
+                    <Check className="h-3.5 w-3.5 text-brand-accent" />
+                    {link.label}
+                  </button>
+                ))}
               </div>
-
             </div>
           </div>
 
           {/* Column 3: Corporate Contacts */}
-          <div className="space-y-4">
-            <h3 className="font-display text-base font-bold uppercase tracking-wider text-white border-b border-white/10 pb-2">
+          <div className="space-y-5">
+            <h3 className="font-display text-sm font-bold uppercase tracking-wider text-white border-b border-white/10 pb-3">
               Head Office
             </h3>
-            <div className="space-y-3 text-sm text-gray-400">
+            <div className="space-y-4 text-sm text-gray-400">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-brand-accent shrink-0 mt-0.5" />
-                <span>
-                Plot 471, Construction Ave Central Area, FCT Abuja, Nigeria
-                </span>
+                <span>Plot 471, Construction Ave Central Area, FCT Abuja, Nigeria</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-brand-accent shrink-0" />
@@ -118,9 +104,9 @@ export default function Footer({ onNav }: FooterProps) {
                 </a>
               </div>
             </div>
-            
-            <div className="pt-2">
-              <div className="inline-flex items-center gap-2 rounded-md bg-white/5 border border-white/10 px-3 py-1.5 text-xs text-brand-accent font-medium">
+
+            <div className="pt-1">
+              <div className="inline-flex items-center gap-2 rounded-lg bg-white/5 border border-white/10 px-4 py-2 text-xs text-brand-accent font-medium">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -130,40 +116,16 @@ export default function Footer({ onNav }: FooterProps) {
             </div>
 
             <div className="flex items-center gap-3 pt-2">
-              <a
-                href="https://facebook.com/PrimoEnergyOilandGas"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Primo Energy on Facebook"
-                className="h-9 w-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 transition"
-              >
+              <a href="https://facebook.com/PrimoEnergyOilandGas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Facebook" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a
-                href="https://instagram.com/primoenergyoilandgas"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Primo Energy on Instagram"
-                className="h-9 w-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 transition"
-              >
+              <a href="https://instagram.com/primoenergyoilandgas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Instagram" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a
-                href="https://tiktok.com/@primoenergy20"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Primo Energy on TikTok"
-                className="h-9 w-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 transition"
-              >
+              <a href="https://tiktok.com/@primoenergy20" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on TikTok" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <TikTokIcon className="h-4 w-4" />
               </a>
-              <a
-                href="https://linkedin.com/company/primo-energy-oil-gas-co-limited"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Primo Energy on LinkedIn"
-                className="h-9 w-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 transition"
-              >
+              <a href="https://linkedin.com/company/primo-energy-oil-gas-co-limited" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on LinkedIn" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <Linkedin className="h-4 w-4" />
               </a>
             </div>

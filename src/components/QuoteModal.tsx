@@ -68,7 +68,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/60 backdrop-blur-xs"
+            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
           />
 
           {/* Modal Container */}
@@ -77,10 +77,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             transition={{ type: 'spring', duration: 0.4 }}
-            className="relative w-full max-w-2xl overflow-hidden rounded-xl bg-brand-dark text-white shadow-2xl border border-white/10 z-10"
+            className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-brand-dark text-white shadow-2xl border border-white/10 z-10 bg-grain"
           >
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+            <div className="flex items-center justify-between border-b border-white/10 px-7 py-5 bg-white/[0.02]">
               <div className="flex items-center gap-3">
                 <FileText className="h-5 w-5 text-brand-accent" />
                 <h2 className="font-display text-xl font-bold tracking-tight">Request a Commercial Quote</h2>
@@ -95,7 +95,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
             </div>
 
             {/* Content */}
-            <div className="max-h-[80vh] overflow-y-auto p-6">
+            <div className="max-h-[80vh] overflow-y-auto p-7">
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <p className="text-sm text-gray-400">
@@ -114,7 +114,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                     <div>
@@ -128,7 +128,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Your company name"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                   </div>
@@ -145,7 +145,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="j.doe@company.com"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                     <div>
@@ -159,7 +159,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+1 (555) 019-2834"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                   </div>
@@ -173,7 +173,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         name="serviceType"
                         value={formData.serviceType}
                         onChange={handleChange}
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       >
                         {SERVICES_DATA.map((service) => (
                           <option key={service.id} value={service.id}>{service.title}</option>
@@ -189,7 +189,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         name="projectScope"
                         value={formData.projectScope}
                         onChange={handleChange}
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       >
                         <option value="small">Small (One-off / occasional order)</option>
                         <option value="medium">Medium (Regular monthly supply)</option>
@@ -205,7 +205,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition"
+                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       >
                         <option value="immediate">Same-day / Urgent</option>
                         <option value="3-6-months">Within the next week</option>
@@ -240,7 +240,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-lg px-5 py-2.5 text-sm font-semibold transition disabled:opacity-50"
+                      className="flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-lg px-5 py-3 text-sm font-semibold transition disabled:opacity-50 hover:shadow-lg active:scale-[0.98]"
                     >
                       {isSubmitting ? (
                         <>

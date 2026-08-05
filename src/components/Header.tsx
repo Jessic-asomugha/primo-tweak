@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X, Flame, ChevronRight, Phone } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Flame, Phone } from 'lucide-react';
 
 interface HeaderProps {
   activePage: 'home' | 'services' | 'about' | 'contact';
@@ -9,6 +9,13 @@ interface HeaderProps {
 
 export default function Header({ activePage, setActivePage, onRequestQuote }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems: { id: 'home' | 'services' | 'about' | 'contact'; label: string }[] = [
     { id: 'home', label: 'Home' },
@@ -24,56 +31,54 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header className={`sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-gray-100' : 'bg-white border-b border-gray-50'}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          
+
           {/* Logo */}
-          <div 
-            onClick={() => handleNavClick('home')} 
-            className="flex items-center gap-2.5 cursor-pointer group"
+          <div
+            onClick={() => handleNavClick('home')}
+            className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-brand-dark group-hover:bg-brand-accent transition-colors duration-300">
-              <Flame className="h-5 w-5 text-white animate-pulse" />
+            <div className="relative flex items-center justify-center h-11 w-11 rounded-xl bg-brand-dark group-hover:bg-brand-darker transition-colors duration-300 shadow-md">
+              <Flame className="h-5 w-5 text-brand-accent" />
+              <div className="absolute inset-0 rounded-xl ring-1 ring-brand-accent/20" />
             </div>
             <div>
               <span className="font-display text-2xl font-bold tracking-tight text-brand-dark">
                 Primo<span className="text-brand-accent">.</span>
               </span>
-              <span className="block text-[10px] font-semibold tracking-widest text-brand-muted uppercase -mt-1">
-                Primo Energy Oil & Gas Co. Limited
+              <span className="block text-[9px] font-semibold tracking-[0.18em] text-brand-muted uppercase -mt-0.5">
+                Energy Oil &amp; Gas Co. Ltd
               </span>
             </div>
           </div>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`font-sans text-[15px] font-medium transition-colors relative py-1.5 ${
-                  activePage === item.id 
-                    ? 'text-brand-accent' 
-                    : 'text-brand-dark/70 hover:text-brand-accent'
+                className={`font-sans text-sm font-medium px-4 py-2 rounded-lg transition-all ${
+                  activePage === item.id
+                    ? 'text-brand-accent bg-brand-accent/5'
+                    : 'text-brand-dark/70 hover:text-brand-accent hover:bg-brand-accent/5'
                 }`}
               >
                 {item.label}
-                {activePage === item.id && (
-                  <span className="absolute bottom-0 left-0 h-0.5 w-full bg-brand-accent" />
-                )}
               </button>
             ))}
           </nav>
 
           {/* Action CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <a 
-              href="tel:+2347025513466" 
+          <div className="hidden md:flex items-center gap-5">
+            <a
+              href="tel:+2347025513466"
               className="flex items-center gap-2 text-sm text-brand-dark/70 hover:text-brand-accent transition-colors"
             >
               <Phone className="h-4 w-4 text-brand-accent" />
-              <span className="font-mono font-medium">+234 702 551 3466</span>
+              <span className="font-mono font-medium text-xs">+234 702 551 3466</span>
             </a>
             <button
               onClick={onRequestQuote}
@@ -87,7 +92,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
           <div className="flex md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-brand-dark hover:bg-gray-100 transition"
+              className="rounded-lg p-2 text-brand-dark hover:bg-brand-light transition"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,15 +104,15 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white">
-          <div className="space-y-1.5 px-4 py-4 shadow-inner">
+          <div className="space-y-1 px-4 py-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
                 className={`block w-full text-left rounded-lg px-4 py-3 text-base font-semibold transition-colors ${
-                  activePage === item.id 
-                    ? 'bg-brand-light text-brand-accent border-l-4 border-brand-accent' 
-                    : 'text-brand-dark/70 hover:bg-gray-50 hover:text-brand-accent'
+                  activePage === item.id
+                    ? 'bg-brand-accent/10 text-brand-accent'
+                    : 'text-brand-dark/70 hover:bg-brand-light hover:text-brand-accent'
                 }`}
               >
                 {item.label}
