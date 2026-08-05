@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Send, CheckCircle, FileText, ChevronRight } from 'lucide-react';
+import { X, Send, CircleCheck as CheckCircle, FileText, ChevronRight } from 'lucide-react';
 import { QuoteRequest } from '../types';
 import { SERVICES_DATA } from '../data';
 
