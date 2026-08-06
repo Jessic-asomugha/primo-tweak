@@ -8,7 +8,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'We supply premium Automotive Gas Oil (AGO) to ensure your operations run smoothly. Our diesel meets the highest quality standards and is delivered reliably to your location. Best for factories, hotels, hospitals, estates, offices, and construction companies.',
     iconName: 'Fuel',
     category: 'supply',
-    imageUrl: 'https://images.pexels.com/photos/12377481/pexels-photo-12377481.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+    imageUrl: 'https://images.pexels.com/photos/35133700/pexels-photo-35133700.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
   },
   {
     id: 'petroleum-products',
@@ -17,7 +17,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'We provide comprehensive petroleum product supply including diesel, petrol (PMS), kerosene (DPK), and other refined products. Our products are sourced from certified depots and delivered with strict quality control measures.',
     iconName: 'Droplet',
     category: 'supply',
-    imageUrl: 'https://images.pexels.com/photos/15970032/pexels-photo-15970032.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+    imageUrl: 'https://images.pexels.com/photos/31616703/pexels-photo-31616703.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
   },
   {
     id: 'bulk-fuel-delivery',
@@ -26,7 +26,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'Our bulk fuel delivery service ensures safe and timely transportation of petroleum products directly to your location. We have the capacity to handle large-volume orders for manufacturing companies, institutions, and large businesses with our fleet of specialized tankers.',
     iconName: 'Truck',
     category: 'logistics',
-    imageUrl: 'https://images.pexels.com/photos/16023092/pexels-photo-16023092.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+    imageUrl: 'https://images.pexels.com/photos/34249579/pexels-photo-34249579.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
   },
   {
     id: 'energy-consulting',
@@ -35,7 +35,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'Our energy consulting services provide professional advisory on fuel management, energy optimisation strategies, and cost-effective energy solutions. We help corporate organisations and government agencies optimise their energy consumption and reduce operational costs.',
     iconName: 'Lightbulb',
     category: 'consulting',
-    imageUrl: 'https://images.pexels.com/photos/8439695/pexels-photo-8439695.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+    imageUrl: 'https://images.pexels.com/photos/8837553/pexels-photo-8837553.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
   },
   {
     id: 'procurement-logistics',
@@ -44,7 +44,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'We offer efficient procurement and logistics solutions for petroleum-related products. Our team handles sourcing, transportation coordination, and delivery management to ensure businesses receive reliable supply chain solutions tailored to their specific needs.',
     iconName: 'Package',
     category: 'logistics',
-    imageUrl: 'https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
+    imageUrl: 'https://images.pexels.com/photos/30688909/pexels-photo-30688909.jpeg?auto=compress&cs=tinysrgb&h=650&w=940'
   }
 ];
 

@@ -77,7 +77,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             transition={{ type: 'spring', duration: 0.4 }}
-            className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-brand-dark text-white shadow-2xl border border-white/10 z-10 bg-grain"
+            className="relative w-full max-w-2xl overflow-hidden bg-brand-dark text-white shadow-2xl border border-white/10 z-10 bg-grain"
           >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-white/10 px-7 py-5 bg-white/[0.02]">
@@ -87,7 +87,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
               </div>
               <button
                 onClick={onClose}
-                className="rounded-lg p-1.5 text-gray-400 hover:bg-white/10 hover:text-white transition"
+                className="p-1.5 text-gray-400 hover:bg-white/10 hover:text-white transition"
                 aria-label="Close modal"
               >
                 <X className="h-5 w-5" />
@@ -114,7 +114,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.fullName}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                     <div>
@@ -128,7 +128,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.company}
                         onChange={handleChange}
                         placeholder="Your company name"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                   </div>
@@ -145,7 +145,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="j.doe@company.com"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                     <div>
@@ -159,7 +159,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+1 (555) 019-2834"
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>
                   </div>
@@ -173,7 +173,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         name="serviceType"
                         value={formData.serviceType}
                         onChange={handleChange}
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       >
                         {SERVICES_DATA.map((service) => (
                           <option key={service.id} value={service.id}>{service.title}</option>
@@ -189,7 +189,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         name="projectScope"
                         value={formData.projectScope}
                         onChange={handleChange}
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       >
                         <option value="small">Small (One-off / occasional order)</option>
                         <option value="medium">Medium (Regular monthly supply)</option>
@@ -205,7 +205,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full rounded-lg bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
+                        className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       >
                         <option value="immediate">Same-day / Urgent</option>
                         <option value="3-6-months">Within the next week</option>
@@ -225,7 +225,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about the quantity, delivery location, or any specific requirements..."
-                      className="w-full rounded-lg bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition resize-none"
+                      className="w-full bg-black/30 border border-white/15 px-3.5 py-2.5 text-sm text-white focus:outline-hidden focus:border-brand-accent transition resize-none"
                     />
                   </div>
 
@@ -233,14 +233,14 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                     <button
                       type="button"
                       onClick={onClose}
-                      className="rounded-lg px-4 py-2.5 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white transition"
+                      className="px-4 py-2.5 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-white transition"
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white rounded-lg px-5 py-3 text-sm font-semibold transition disabled:opacity-50 hover:shadow-lg active:scale-[0.98]"
+                      className="flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white px-5 py-3 text-sm font-semibold transition disabled:opacity-50 hover:shadow-lg active:scale-[0.98]"
                     >
                       {isSubmitting ? (
                         <>
@@ -271,7 +271,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                     Thank you, <strong className="text-white">{formData.fullName}</strong>. Your inquiry has been forwarded to the <span className="text-brand-accent font-semibold">{formData.serviceType.replace('-', ' ')}</span> engineering taskforce.
                   </p>
 
-                  <div className="bg-black/40 border border-white/10 rounded-lg p-4 w-full max-w-sm mb-6">
+                  <div className="bg-black/40 border border-white/10 p-4 w-full max-w-sm mb-6">
                     <span className="block text-[10px] font-semibold tracking-widest text-gray-500 uppercase">Proposal Ref Ticket</span>
                     <span className="block text-2xl font-mono font-bold text-brand-accent tracking-wider mt-1">{ticketId}</span>
                   </div>
@@ -282,7 +282,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
 
                   <button
                     onClick={resetForm}
-                    className="bg-white/10 hover:bg-white/15 text-white rounded-lg px-6 py-2.5 text-sm font-semibold transition"
+                    className="bg-white/10 hover:bg-white/15 text-white px-6 py-2.5 text-sm font-semibold transition"
                   >
                     Done
                   </button>
