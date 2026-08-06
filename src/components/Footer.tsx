@@ -32,7 +32,7 @@ export default function Footer({ onNav }: FooterProps) {
           {/* Column 1: Company Profile */}
           <div className="space-y-5">
             <div className="flex items-center gap-3 cursor-pointer group" onClick={() => handleLinkClick('home')}>
-              <div className="flex items-center justify-center h-11 w-11 rounded-xl bg-brand-accent group-hover:scale-105 transition-transform">
+              <div className="flex items-center justify-center h-11 w-11 bg-brand-accent group-hover:scale-105 transition-transform">
                 <Flame className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -106,26 +106,26 @@ export default function Footer({ onNav }: FooterProps) {
             </div>
 
             <div className="pt-1">
-              <div className="inline-flex items-center gap-2 rounded-lg bg-white/5 border border-white/10 px-4 py-2 text-xs text-brand-accent font-medium">
+              <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 text-xs text-brand-accent font-medium">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 bg-emerald-500"></span>
                 </span>
                 24-Hour Customer Support
               </div>
             </div>
 
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://facebook.com/PrimoEnergyOilandGas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Facebook" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+              <a href="https://facebook.com/PrimoEnergyOilandGas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Facebook" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://instagram.com/primoenergyoilandgas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Instagram" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+              <a href="https://instagram.com/primoenergyoilandgas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Instagram" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="https://tiktok.com/@primoenergy20" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on TikTok" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+              <a href="https://tiktok.com/@primoenergy20" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on TikTok" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <TikTokIcon className="h-4 w-4" />
               </a>
-              <a href="https://linkedin.com/company/primo-energy-oil-gas-co-limited" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on LinkedIn" className="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+              <a href="https://linkedin.com/company/primo-energy-oil-gas-co-limited" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on LinkedIn" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
                 <Linkedin className="h-4 w-4" />
               </a>
             </div>

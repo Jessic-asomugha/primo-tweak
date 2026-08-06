@@ -78,7 +78,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent px-4 py-2 rounded-full bg-white/5 border border-brand-accent/20 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-white/5 border border-brand-accent/20 backdrop-blur-sm"
           >
             <Compass className="h-3.5 w-3.5" />
             Established 2024 • CAC Reg: 7830522
@@ -114,9 +114,9 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
                 whileInView="visible"
                 viewport={{ once: true, margin: '-50px' }}
                 variants={fadeInVariants}
-                className="p-8 rounded-2xl bg-brand-light border border-gray-100 space-y-4 hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-accent/20 transition-all duration-300 group"
+                className="p-8 bg-brand-light border border-gray-100 space-y-4 hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-accent/20 transition-all duration-300 group"
               >
-                <div className="h-14 w-14 rounded-xl bg-brand-accent/10 group-hover:bg-brand-accent group-hover:text-white flex items-center justify-center text-brand-accent transition-all duration-300">
+                <div className="h-14 w-14 bg-brand-accent/10 group-hover:bg-brand-accent group-hover:text-white flex items-center justify-center text-brand-accent transition-all duration-300">
                   <v.icon className="h-7 w-7" />
                 </div>
                 <h3 className="font-display text-lg font-bold">{v.title}</h3>
@@ -134,7 +134,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
             className="flex flex-wrap justify-center gap-3 mt-12"
           >
             {coreValues.map((val) => (
-              <span key={val} className="px-5 py-2 bg-white border border-gray-200 rounded-full text-xs font-semibold text-brand-dark hover:border-brand-accent/40 hover:text-brand-accent transition-colors">
+              <span key={val} className="px-5 py-2 bg-white border border-gray-200 text-xs font-semibold text-brand-dark hover:border-brand-accent/40 hover:text-brand-accent transition-colors">
                 {val}
               </span>
             ))}
@@ -159,9 +159,9 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-7 bg-white rounded-2xl border border-gray-100 space-y-4 relative hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-accent/20 transition-all duration-300 group"
+                className="p-7 bg-white border border-gray-100 space-y-4 relative hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-accent/20 transition-all duration-300 group"
               >
-                <div className="h-12 w-12 rounded-xl bg-brand-dark group-hover:bg-brand-accent flex items-center justify-center text-white transition-colors duration-300">
+                <div className="h-12 w-12 bg-brand-dark group-hover:bg-brand-accent flex items-center justify-center text-white transition-colors duration-300">
                   <MapPin className="h-6 w-6" />
                 </div>
                 <span className="block font-display text-2xl font-black text-brand-accent">{m.code}</span>
@@ -194,7 +194,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   <div className="h-64 overflow-hidden bg-gray-100 relative">
@@ -220,7 +220,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
           <div className="text-center mt-14">
             <button
               onClick={onRequestQuote}
-              className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3.5 px-8 rounded-lg text-xs uppercase tracking-wider transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
+              className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3.5 px-8 text-xs uppercase tracking-wider transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
             >
               Request a Quote
               <ArrowRight className="h-4 w-4" />

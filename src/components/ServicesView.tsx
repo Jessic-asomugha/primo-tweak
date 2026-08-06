@@ -186,13 +186,13 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className={`${bgClass} py-16 sm:py-20`}
+                className={`${bgClass} py-10 sm:py-12`}
               >
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-center">
 
-                    {/* Image */}
-                    <div className={`overflow-hidden aspect-[4/3] ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                    {/* Image — always left */}
+                    <div className="overflow-hidden aspect-[4/3]">
                       <img
                         src={service.imageUrl}
                         alt={service.title}
@@ -200,8 +200,8 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
                       />
                     </div>
 
-                    {/* Text */}
-                    <div className={`space-y-4 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                    {/* Text — always right */}
+                    <div className="space-y-3">
                       <div className="flex items-center gap-3">
                         <div className="h-11 w-11 flex items-center justify-center bg-brand-accent">
                           <Icon className="h-5 w-5 text-white" />

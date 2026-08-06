@@ -40,9 +40,9 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="relative flex items-center justify-center h-11 w-11 rounded-xl bg-brand-dark group-hover:bg-brand-darker transition-colors duration-300 shadow-md">
+            <div className="relative flex items-center justify-center h-11 w-11 bg-brand-dark group-hover:bg-brand-darker transition-colors duration-300 shadow-md">
               <Flame className="h-5 w-5 text-brand-accent" />
-              <div className="absolute inset-0 rounded-xl ring-1 ring-brand-accent/20" />
+              <div className="absolute inset-0 ring-1 ring-brand-accent/20" />
             </div>
             <div>
               <span className="font-display text-2xl font-bold tracking-tight text-brand-dark">
@@ -60,7 +60,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`font-sans text-sm font-medium px-4 py-2 rounded-lg transition-all ${
+                className={`font-sans text-sm font-medium px-4 py-2 transition-all ${
                   activePage === item.id
                     ? 'text-brand-accent bg-brand-accent/5'
                     : 'text-brand-dark/70 hover:text-brand-accent hover:bg-brand-accent/5'
@@ -82,7 +82,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
             </a>
             <button
               onClick={onRequestQuote}
-              className="bg-brand-accent hover:bg-brand-accent-hover text-white px-5 py-2.5 text-sm font-semibold rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200"
+              className="bg-brand-accent hover:bg-brand-accent-hover text-white px-5 py-2.5 text-sm font-semibold shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200"
             >
               Request a Quote
             </button>
@@ -92,7 +92,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
           <div className="flex md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="rounded-lg p-2 text-brand-dark hover:bg-brand-light transition"
+              className="p-2 text-brand-dark hover:bg-brand-light transition"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -109,7 +109,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`block w-full text-left rounded-lg px-4 py-3 text-base font-semibold transition-colors ${
+                className={`block w-full text-left px-4 py-3 text-base font-semibold transition-colors ${
                   activePage === item.id
                     ? 'bg-brand-accent/10 text-brand-accent'
                     : 'text-brand-dark/70 hover:bg-brand-light hover:text-brand-accent'
@@ -131,7 +131,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
                   setMobileMenuOpen(false);
                   onRequestQuote();
                 }}
-                className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white text-center font-bold py-3 px-4 rounded-lg transition"
+                className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white text-center font-bold py-3 px-4 transition"
               >
                 Request a Quote — Now
               </button>

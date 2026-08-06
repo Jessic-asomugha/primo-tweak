@@ -66,8 +66,8 @@ export default function HomeView({
               transition={{ duration: 0.6 }}
               className="lg:col-span-7 space-y-8 max-w-2xl"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full text-brand-accent text-xs font-semibold uppercase tracking-wider border border-brand-accent/20 backdrop-blur-sm">
-                <span className="h-2 w-2 rounded-full bg-brand-accent animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-accent text-xs font-semibold uppercase tracking-wider border border-brand-accent/20 backdrop-blur-sm">
+                <span className="h-2 w-2 bg-brand-accent animate-pulse" />
                 Established 2024 • CAC Reg: 7830522
               </div>
 
@@ -84,14 +84,14 @@ export default function HomeView({
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <button
                   onClick={onRequestQuote}
-                  className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 group text-sm"
+                  className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-4 px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 group text-sm"
                 >
                   Request a Quote
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={onNavigateToAbout}
-                  className="bg-white/10 hover:bg-white/15 text-white font-semibold py-4 px-8 rounded-lg border border-white/20 hover:border-brand-accent/40 backdrop-blur-sm hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-center text-sm"
+                  className="bg-white/10 hover:bg-white/15 text-white font-semibold py-4 px-8 border border-white/20 hover:border-brand-accent/40 backdrop-blur-sm hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 text-center text-sm"
                 >
                   Learn More
                 </button>
@@ -145,12 +145,12 @@ export default function HomeView({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.15 }}
-                className="relative group p-7 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-accent/40 hover:bg-white/[0.07] hover:-translate-y-1.5 transition-all duration-300"
+                className="relative group p-7 bg-white/5 border border-white/5 hover:border-brand-accent/40 hover:bg-white/[0.07] hover:-translate-y-1.5 transition-all duration-300"
               >
                 <div className="absolute -top-5 right-5 text-7xl font-display font-bold text-white/[0.04] select-none group-hover:text-brand-accent/10 transition-colors duration-300">
                   {step.number}
                 </div>
-                <div className="h-10 w-10 rounded-lg bg-brand-accent/15 flex items-center justify-center text-brand-accent mb-5">
+                <div className="h-10 w-10 bg-brand-accent/15 flex items-center justify-center text-brand-accent mb-5">
                   <span className="font-display text-sm font-bold">{step.number}</span>
                 </div>
                 <span className="block text-xs font-bold tracking-wider text-brand-accent uppercase mb-2">Phase {step.number}</span>
@@ -174,15 +174,15 @@ export default function HomeView({
           >
             {/* Visual */}
             <div className="lg:col-span-5 relative">
-              <div className="absolute -top-6 -left-6 w-28 h-28 bg-brand-accent/10 -z-10 rounded-2xl" />
-              <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
+              <div className="absolute -top-6 -left-6 w-28 h-28 bg-brand-accent/10 -z-10" />
+              <div className="overflow-hidden shadow-2xl border border-gray-100">
                 <img
                   src="/our-mission-on-the-home-page.jpg"
                   alt="Petroleum refinery towers at dusk"
                   className="w-full h-[440px] object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-brand-dark text-white p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs border border-white/10">
+              <div className="absolute -bottom-8 -right-8 bg-brand-dark text-white p-6 shadow-2xl hidden sm:block max-w-xs border border-white/10">
                 <span className="block font-mono text-[10px] uppercase tracking-widest text-brand-accent">Service Standard</span>
                 <span className="block text-3xl font-display font-bold mt-1">24/7 Support</span>
                 <span className="block text-xs text-gray-400 mt-1.5">Same-day delivery available with professional customer support.</span>
@@ -214,7 +214,7 @@ export default function HomeView({
               {/* Values chips */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
                 {['Integrity', 'Excellence', 'Reliability'].map((v) => (
-                  <div key={v} className="flex items-center gap-2 bg-brand-light px-4 py-2.5 rounded-lg border border-gray-100">
+                  <div key={v} className="flex items-center gap-2 bg-brand-light px-4 py-2.5 border border-gray-100">
                     <CheckCircle2 className="h-4 w-4 text-brand-accent" />
                     <span className="text-xs font-semibold text-brand-dark">{v}</span>
                   </div>
@@ -224,7 +224,7 @@ export default function HomeView({
               <div className="pt-3">
                 <button
                   onClick={onRequestQuote}
-                  className="bg-brand-accent hover:bg-brand-accent-hover text-white px-7 py-3.5 text-sm font-semibold rounded-lg transition shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
+                  className="bg-brand-accent hover:bg-brand-accent-hover text-white px-7 py-3.5 text-sm font-semibold transition shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
                 >
                   Request a Quote — Now
                 </button>
@@ -263,10 +263,10 @@ export default function HomeView({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-accent/30 transition-all duration-300 flex flex-col justify-between group"
+                  className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-accent/30 transition-all duration-300 flex flex-col justify-between group"
                 >
                   <div>
-                    <div className="h-14 w-14 rounded-xl bg-brand-light group-hover:bg-brand-accent group-hover:text-white flex items-center justify-center text-brand-accent mb-6 transition-all duration-300">
+                    <div className="h-14 w-14 bg-brand-light group-hover:bg-brand-accent group-hover:text-white flex items-center justify-center text-brand-accent mb-6 transition-all duration-300">
                       <IconComponent className="h-7 w-7" />
                     </div>
                     <h3 className="font-display text-xl font-bold tracking-tight text-brand-dark mb-3">
@@ -291,7 +291,7 @@ export default function HomeView({
           <div className="text-center mt-14">
             <button
               onClick={onNavigateToServices}
-              className="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-darker text-white px-8 py-3.5 rounded-lg text-xs font-bold tracking-wider uppercase hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+              className="inline-flex items-center gap-2 bg-brand-dark hover:bg-brand-darker text-white px-8 py-3.5 text-xs font-bold tracking-wider uppercase hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all"
             >
               View All Services
               <ChevronRight className="h-4 w-4" />
@@ -323,8 +323,8 @@ export default function HomeView({
                   { icon: Award, title: 'Fast & Reliable Delivery', desc: 'Same-day delivery available with 24-hour customer support for urgent requirements.' },
                   { icon: Building2, title: 'Competitive Pricing', desc: 'Market-competitive wholesale pricing with bulk supply capability.' },
                 ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4 bg-brand-light p-5 rounded-xl border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all duration-300">
-                    <div className="h-10 w-10 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
+                  <div key={item.title} className="flex items-start gap-4 bg-brand-light p-5 border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all duration-300">
+                    <div className="h-10 w-10 bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
                       <item.icon className="h-5 w-5" />
                     </div>
                     <div>
@@ -343,14 +343,14 @@ export default function HomeView({
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-200">
+              <div className="overflow-hidden shadow-2xl border border-gray-200">
                 <img
                   src="/why-choose-us.jpg"
                   alt="Engineers inspecting industrial pipelines"
                   className="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute top-6 right-6 bg-brand-dark/95 text-white px-5 py-3 rounded-xl text-xs font-mono border border-white/10 shadow-xl backdrop-blur-sm">
+              <div className="absolute top-6 right-6 bg-brand-dark/95 text-white px-5 py-3 text-xs font-mono border border-white/10 shadow-xl backdrop-blur-sm">
                 <span>ESTABLISHED: 14 AUGUST 2024</span>
               </div>
             </motion.div>
@@ -381,7 +381,7 @@ export default function HomeView({
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="group overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="relative h-56 overflow-hidden bg-gray-100">
                   <img
@@ -390,7 +390,7 @@ export default function HomeView({
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                  <span className="absolute top-4 right-4 bg-brand-accent text-white font-mono text-xs font-bold px-3 py-1.5 rounded-md z-10 shadow-lg">
+                  <span className="absolute top-4 right-4 bg-brand-accent text-white font-mono text-xs font-bold px-3 py-1.5 z-10 shadow-lg">
                     {item.year}
                   </span>
                 </div>
@@ -432,14 +432,14 @@ export default function HomeView({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="rounded-2xl p-8 transition-all duration-300 border relative bg-white/5 border-white/10 hover:border-brand-accent/30 hover:-translate-y-1 backdrop-blur-sm"
+                className="p-8 transition-all duration-300 border relative bg-white/5 border-white/10 hover:border-brand-accent/30 hover:-translate-y-1 backdrop-blur-sm"
               >
                 <Quote className="absolute top-7 right-7 h-10 w-10 text-brand-accent/15" />
                 <div className="flex items-center gap-4 mb-6">
                   <img
                     src={t.avatarUrl}
                     alt={t.name}
-                    className="h-14 w-14 rounded-full object-cover border-2 border-brand-accent/30 shadow-md"
+                    className="h-14 w-14 object-cover border-2 border-brand-accent/30 shadow-md"
                   />
                   <div>
                     <h4 className="font-display text-sm font-bold text-white">{t.name}</h4>
@@ -489,7 +489,7 @@ export default function HomeView({
               <div className="space-y-3 pt-2">
                 {['Same-day delivery available', '24-hour customer support', 'Bulk supply capability', 'Competitive wholesale pricing'].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-sm font-semibold text-brand-dark">
-                    <div className="h-6 w-6 rounded-full bg-brand-accent/15 flex items-center justify-center shrink-0">
+                    <div className="h-6 w-6 bg-brand-accent/15 flex items-center justify-center shrink-0">
                       <CheckCircle2 className="h-4 w-4 text-brand-accent" />
                     </div>
                     {item}
@@ -500,13 +500,13 @@ export default function HomeView({
               <div className="pt-3 flex flex-wrap gap-4">
                 <button
                   onClick={onRequestQuote}
-                  className="bg-brand-accent hover:bg-brand-accent-hover text-white px-7 py-3.5 text-xs font-bold tracking-wider uppercase rounded-lg transition shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
+                  className="bg-brand-accent hover:bg-brand-accent-hover text-white px-7 py-3.5 text-xs font-bold tracking-wider uppercase transition shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
                 >
                   Request a Quote
                 </button>
                 <button
                   onClick={onNavigateToContact}
-                  className="bg-white hover:bg-gray-50 text-brand-dark border border-gray-200 px-7 py-3.5 text-xs font-bold tracking-wider uppercase rounded-lg transition hover:shadow-md hover:-translate-y-0.5"
+                  className="bg-white hover:bg-gray-50 text-brand-dark border border-gray-200 px-7 py-3.5 text-xs font-bold tracking-wider uppercase transition hover:shadow-md hover:-translate-y-0.5"
                 >
                   Contact Us
                 </button>
@@ -515,15 +515,15 @@ export default function HomeView({
 
             {/* Visual */}
             <div className="relative">
-              <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-brand-accent/15 -z-10 rounded-2xl" />
-              <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-100">
+              <div className="absolute -bottom-6 -right-6 w-28 h-28 bg-brand-accent/15 -z-10" />
+              <div className="overflow-hidden shadow-2xl border border-gray-100">
                 <img
                   src="/trusted-industry-partner.jpg"
                   alt="Industrial buildings by the sea"
                   className="w-full h-[440px] object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute top-6 left-6 bg-brand-dark/95 text-white py-3 px-5 rounded-xl backdrop-blur-sm text-[10px] font-mono tracking-wider border border-white/10 shadow-xl">
+              <div className="absolute top-6 left-6 bg-brand-dark/95 text-white py-3 px-5 backdrop-blur-sm text-[10px] font-mono tracking-wider border border-white/10 shadow-xl">
                 <span>SERVICE STATUS: ACTIVE</span>
                 <span className="block text-brand-accent font-bold mt-0.5">24/7 SUPPORT // SAME-DAY DELIVERY</span>
               </div>

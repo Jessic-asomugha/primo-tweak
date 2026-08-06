@@ -60,7 +60,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
     setSubmitted(false);
   };
 
-  const inputClass = "w-full rounded-lg bg-white border border-gray-200 px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition";
+  const inputClass = "w-full bg-white border border-gray-200 px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition";
   const labelClass = "block text-[11px] font-bold text-brand-dark/70 uppercase tracking-wider mb-2";
 
   return (
@@ -83,7 +83,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
             transition={{ duration: 0.5 }}
             className="max-w-2xl space-y-5"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent px-4 py-2 rounded-full bg-white/5 border border-brand-accent/20 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent px-4 py-2 text-xs font-bold uppercase tracking-widest text-brand-accent bg-white/5 border border-brand-accent/20 backdrop-blur-sm">
               Contact Primo Energy
             </span>
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">Get in <span className="text-brand-accent">Touch</span></h1>
@@ -110,8 +110,8 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
               </div>
 
               <div className="space-y-4 pt-4">
-                <div className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all">
-                  <div className="h-11 w-11 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
+                <div className="flex items-start gap-4 p-5 bg-white border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all">
+                  <div className="h-11 w-11 bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -122,8 +122,8 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all">
-                  <div className="h-11 w-11 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
+                <div className="flex items-start gap-4 p-5 bg-white border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all">
+                  <div className="h-11 w-11 bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
@@ -140,8 +140,8 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all">
-                  <div className="h-11 w-11 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
+                <div className="flex items-start gap-4 p-5 bg-white border border-gray-100 hover:shadow-md hover:border-brand-accent/20 transition-all">
+                  <div className="h-11 w-11 bg-brand-accent/10 flex items-center justify-center text-brand-accent shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
@@ -154,8 +154,8 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-5 bg-brand-dark text-white rounded-xl border border-white/10">
-                  <div className="h-11 w-11 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent shrink-0">
+                <div className="flex items-start gap-4 p-5 bg-brand-dark text-white border border-white/10">
+                  <div className="h-11 w-11 bg-brand-accent/20 flex items-center justify-center text-brand-accent shrink-0">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
@@ -178,7 +178,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
             </div>
 
             {/* Right: Form */}
-            <div className="lg:col-span-7 bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            <div className="lg:col-span-7 bg-white p-8 border border-gray-100 shadow-sm">
               <div className="mb-6">
                 <h2 className="font-display text-xl font-bold tracking-tight mb-1">Send Us a Message</h2>
                 <p className="text-xs text-brand-muted">Fill out the form below and we'll get back to you shortly.</p>
@@ -224,7 +224,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-brand-accent hover:bg-brand-accent-hover disabled:opacity-50 text-white font-bold py-3.5 px-6 rounded-lg text-sm uppercase tracking-widest hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-brand-accent hover:bg-brand-accent-hover disabled:opacity-50 text-white font-bold py-3.5 px-6 text-sm uppercase tracking-widest hover:shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                       >
                         {isSubmitting ? (
                           <>
@@ -247,7 +247,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12 space-y-4"
                   >
-                    <div className="h-16 w-16 rounded-full bg-emerald-50 flex items-center justify-center mx-auto">
+                    <div className="h-16 w-16 bg-emerald-50 flex items-center justify-center mx-auto">
                       <CheckCircle className="h-10 w-10 text-emerald-500" />
                     </div>
                     <h3 className="font-display text-2xl font-bold tracking-tight">Message Sent</h3>
@@ -256,7 +256,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                     </p>
                     <button
                       onClick={resetForm}
-                      className="bg-brand-dark hover:bg-brand-darker text-white px-6 py-2.5 rounded-lg text-xs font-semibold transition hover:shadow-md"
+                      className="bg-brand-dark hover:bg-brand-darker text-white px-6 py-2.5 text-xs font-semibold transition hover:shadow-md"
                     >
                       Send Another Message
                     </button>
@@ -279,7 +279,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
         />
         <div className="absolute inset-0 bg-brand-darker/40" />
         <div className="absolute inset-0 flex items-center justify-center p-4">
-          <div className="bg-brand-darker/95 border border-white/10 rounded-2xl p-6 shadow-2xl max-w-sm text-white backdrop-blur-sm">
+          <div className="bg-brand-darker/95 border border-white/10 p-6 shadow-2xl max-w-sm text-white backdrop-blur-sm">
             <span className="block text-[10px] font-mono tracking-widest text-brand-accent uppercase">Head Office Location</span>
             <h4 className="font-display text-lg font-bold mt-1">Abuja, FCT — Nigeria</h4>
             <p className="text-xs text-gray-400 mt-2">Federal Capital Territory</p>
