@@ -123,32 +123,31 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
   return (
     <div className="bg-white text-brand-dark min-h-screen">
 
-      {/* Page Header */}
-      <section className="relative py-24 bg-brand-darker text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="/trusted-industry-partner.jpg"
-            alt="Industrial facility"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-brand-darker/80 to-brand-darker/60" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Page Header — editorial style */}
+      <section className="bg-[#f6f3ee] border-b border-gray-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="max-w-2xl space-y-5"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 text-brand-accent text-xs font-semibold uppercase tracking-wider bg-white/5 border border-brand-accent/20 backdrop-blur-sm">
-              Primo Energy Services
-            </span>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">
-              Our <span className="text-brand-accent">Services</span>
-            </h1>
-            <p className="text-sm text-gray-300 leading-relaxed max-w-xl">
-              Comprehensive petroleum products and energy solutions tailored to meet your business needs across Nigeria.
-            </p>
+            <div className="md:col-span-8 space-y-6">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-10 bg-brand-accent" />
+                <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-mono">What We Offer</span>
+              </div>
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark leading-[1.05]">
+                Our <span className="text-brand-accent">Services</span>
+              </h1>
+              <p className="text-base text-brand-muted leading-relaxed max-w-lg">
+                Comprehensive petroleum products and energy solutions tailored to meet your business needs across Nigeria.
+              </p>
+            </div>
+            <div className="md:col-span-4 hidden md:flex flex-col items-end gap-1">
+              <span className="font-display text-7xl font-black text-brand-accent/15 leading-none">01</span>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-brand-muted">Services</span>
+            </div>
           </motion.div>
         </div>
       </section>

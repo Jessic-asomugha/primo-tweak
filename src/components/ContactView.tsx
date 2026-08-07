@@ -66,30 +66,31 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
   return (
     <div className="bg-white text-brand-dark min-h-screen">
 
-      {/* Page Header */}
-      <section className="relative py-20 bg-brand-darker text-white overflow-hidden bg-grain">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="/trusted-industry-partner.jpg"
-            alt="Offshore oil platform"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-brand-darker/80 to-brand-darker/50" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Page Header — editorial style */}
+      <section className="bg-[#f6f3ee] border-b border-gray-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="max-w-2xl space-y-5"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent px-4 py-2 text-xs font-bold uppercase tracking-widest text-brand-accent bg-white/5 border border-brand-accent/20 backdrop-blur-sm">
-              Contact Primo Energy
-            </span>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">Get in <span className="text-brand-accent">Touch</span></h1>
-            <p className="text-sm text-gray-300 leading-relaxed max-w-xl">
-              Always ready to address your fuel supply needs, energy consulting requests, and logistics requirements. Reach out to us anytime.
-            </p>
+            <div className="md:col-span-8 space-y-6">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-10 bg-brand-accent" />
+                <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-mono">Get in Touch</span>
+              </div>
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark leading-[1.05]">
+                Contact <span className="text-brand-accent">Us</span>
+              </h1>
+              <p className="text-base text-brand-muted leading-relaxed max-w-lg">
+                Always ready to address your fuel supply needs, energy consulting requests, and logistics requirements. Reach out to us anytime.
+              </p>
+            </div>
+            <div className="md:col-span-4 hidden md:flex flex-col items-end gap-1">
+              <span className="font-display text-7xl font-black text-brand-accent/15 leading-none">03</span>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-brand-muted">Contact</span>
+            </div>
           </motion.div>
         </div>
       </section>

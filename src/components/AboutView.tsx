@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Shield, Eye, Target, MapPin, Compass, ArrowRight } from 'lucide-react';
+import { Shield, Eye, Target, MapPin, ArrowRight } from 'lucide-react';
 
 interface AboutViewProps {
   onRequestQuote: () => void;
@@ -63,42 +63,32 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
   return (
     <div className="bg-white text-brand-dark min-h-screen">
 
-      {/* Hero */}
-      <section className="relative py-24 bg-brand-darker text-white overflow-hidden bg-grain">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg"
-            alt="Offshore oil rig at sunset"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-brand-darker/70 to-brand-darker/40" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
+      {/* Page Header — editorial style */}
+      <section className="bg-[#f6f3ee] border-b border-gray-200">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-28 sm:pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-accent px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-white/5 border border-brand-accent/20 backdrop-blur-sm"
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end"
           >
-            <Compass className="h-3.5 w-3.5" />
-            Established 2024 • CAC Reg: 7830522
-          </motion.span>
-          <motion.h1
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
-          >
-            About <span className="text-brand-accent">Primo Energy</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed"
-          >
-            Primo Energy Oil &amp; Gas Co. Limited is a Nigerian energy company committed to delivering high-quality petroleum products and energy solutions to businesses, industries, institutions, and households.
-          </motion.p>
+            <div className="md:col-span-8 space-y-6">
+              <div className="flex items-center gap-3">
+                <span className="h-px w-10 bg-brand-accent" />
+                <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-mono">Who We Are</span>
+              </div>
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark leading-[1.05]">
+                About <span className="text-brand-accent">Primo</span>
+              </h1>
+              <p className="text-base text-brand-muted leading-relaxed max-w-lg">
+                Primo Energy Oil &amp; Gas Co. Limited is a Nigerian energy company committed to delivering high-quality petroleum products and energy solutions to businesses, industries, institutions, and households.
+              </p>
+            </div>
+            <div className="md:col-span-4 hidden md:flex flex-col items-end gap-1">
+              <span className="font-display text-7xl font-black text-brand-accent/15 leading-none">02</span>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-brand-muted">About</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 
