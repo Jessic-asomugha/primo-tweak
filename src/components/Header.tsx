@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Flame, Phone } from 'lucide-react';
+import { Menu, X, Flame } from 'lucide-react';
 
 interface HeaderProps {
   activePage: 'home' | 'services' | 'about' | 'contact';
@@ -73,13 +73,6 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
 
           {/* Action CTA */}
           <div className="hidden md:flex items-center gap-5">
-            <a
-              href="tel:+2347025513466"
-              className="flex items-center gap-2 text-sm text-brand-dark/70 hover:text-brand-accent transition-colors"
-            >
-              <Phone className="h-4 w-4 text-brand-accent" />
-              <span className="font-mono font-medium text-xs">+234 702 551 3466</span>
-            </a>
             <button
               onClick={onRequestQuote}
               className="bg-brand-accent hover:bg-brand-accent-hover text-white px-5 py-2.5 text-sm font-semibold shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200"
@@ -120,12 +113,6 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
             ))}
 
             <div className="border-t border-gray-100 pt-4 mt-2 space-y-4">
-              <div className="flex items-center justify-between px-4 text-sm text-brand-muted">
-                <span>Direct Inquiries:</span>
-                <a href="tel:+2347025513466" className="font-mono font-semibold text-brand-dark flex items-center gap-1.5 hover:text-brand-accent">
-                  <Phone className="h-3.5 w-3.5" /> +234 702 551 3466
-                </a>
-              </div>
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

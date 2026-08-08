@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send, CircleCheck as CheckCircle, FileText, ChevronRight } from 'lucide-react';
 import { QuoteRequest } from '../types';
@@ -25,6 +25,15 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [ticketId, setTicketId] = useState('');
+
+  useEffect(() => {
+    if (isOpen) {
+      setFormData(prev => ({
+        ...prev,
+        serviceType: preselectedService || SERVICES_DATA[0].id,
+      }));
+    }
+  }, [isOpen, preselectedService]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -99,7 +108,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <p className="text-sm text-gray-400">
-                    Provide your fuel supply requirements below, and our team will get back to you with a competitive quote.
+                    Provide your diesel supply requirements below, and our team will get back to you with a competitive quote.
                   </p>
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -158,7 +167,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService = '' }:
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+1 (555) 019-2834"
+                        placeholder="+234 801 234 5678"
                         className="w-full bg-black/30 border border-white/15 px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/15 transition"
                       />
                     </div>

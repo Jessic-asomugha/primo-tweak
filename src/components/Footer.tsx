@@ -99,8 +99,8 @@ export default function Footer({ onNav }: FooterProps) {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-brand-accent shrink-0" />
-                <a href="mailto:info@primoenergy.com.ng" className="hover:text-white transition">
-                  info@primoenergy.com.ng
+                <a href="mailto:diesel@primo.com.ng" className="hover:text-white transition">
+                  diesel@primo.com.ng
                 </a>
               </div>
             </div>

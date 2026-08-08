@@ -84,7 +84,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                 Contact <span className="text-brand-accent">Us</span>
               </h1>
               <p className="text-base text-brand-muted leading-relaxed max-w-lg">
-                Always ready to address your fuel supply needs, energy consulting requests, and logistics requirements. Reach out to us anytime.
+                Always ready to address your diesel supply needs, energy consulting requests, and logistics requirements. Reach out to us anytime.
               </p>
             </div>
             <div className="md:col-span-4 hidden md:flex flex-col items-end gap-1">
@@ -106,7 +106,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                 <span className="block text-xs font-bold uppercase tracking-widest text-brand-accent">Contact Information</span>
                 <h2 className="font-display text-2xl font-bold tracking-tight">Talk to Our Team</h2>
                 <p className="text-sm text-brand-muted leading-relaxed">
-                  For fuel supply inquiries, energy consulting requests, and logistics requirements, please reach out to us using the contact information below.
+                  For diesel supply inquiries, energy consulting requests, and logistics requirements, please reach out to us using the contact information below.
                 </p>
               </div>
 
@@ -148,8 +148,8 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
                   <div>
                     <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider font-mono">Email</h4>
                     <p className="text-sm text-brand-dark font-medium mt-1">
-                      <a href="mailto:info@primoenergy.com.ng" className="hover:text-brand-accent transition">
-                        info@primoenergy.com.ng
+                      <a href="mailto:diesel@primo.com.ng" className="hover:text-brand-accent transition">
+                        diesel@primo.com.ng
                       </a>
                     </p>
                   </div>
@@ -213,7 +213,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
 
                     <div>
                       <label className={labelClass}>Subject</label>
-                      <input type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="Fuel supply inquiry..." className={inputClass} />
+                      <input type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="Diesel supply inquiry..." className={inputClass} />
                     </div>
 
                     <div>

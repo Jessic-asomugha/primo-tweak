@@ -11,7 +11,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
     {
       name: 'Oil & Gas',
       role: 'Energy Sector',
-      desc: 'Providing reliable fuel supply for upstream and downstream operations across the Nigerian energy industry.',
+      desc: 'Providing reliable diesel supply for upstream and downstream operations across the Nigerian energy industry.',
       imageUrl: '/hero-imge.jpg',
     },
     {
@@ -23,7 +23,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
     {
       name: 'Manufacturing',
       role: 'Industrial Production',
-      desc: 'Ensuring uninterrupted operations for manufacturing industries with consistent fuel supply and logistics.',
+      desc: 'Ensuring uninterrupted operations for manufacturing industries with consistent diesel supply and logistics.',
       imageUrl: '/manufacturing.jpg',
     },
     {
@@ -36,7 +36,7 @@ export default function AboutView({ onRequestQuote }: AboutViewProps) {
 
   const serviceAreas = [
     { code: 'FCT', title: 'Abuja', desc: 'Federal Capital Territory — Head Office and primary operations base.' },
-    { code: 'KD', title: 'Kaduna', desc: 'Major commercial hub with comprehensive fuel distribution network.' },
+    { code: 'KD', title: 'Kaduna', desc: 'Major commercial hub with comprehensive diesel distribution network.' },
     { code: 'NS', title: 'Nasarawa', desc: 'Expanding service coverage for industrial and residential clients.' },
     { code: 'NG', title: 'Niger & Kogi', desc: 'Extended reach to support growing energy demands in the region.' },
   ];

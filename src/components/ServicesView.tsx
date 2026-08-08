@@ -31,7 +31,7 @@ const FEATURES: Record<string, string[]> = {
   'diesel-ago-supply': ['Premium AGO quality', 'Same-day delivery', 'Bulk supply capability', '24/7 customer support'],
   'petroleum-products': ['Diesel, petrol & kerosene', 'Certified depot sourcing', 'Strict quality control', 'Flexible volumes'],
   'bulk-fuel-delivery': ['Specialised tanker fleet', 'Large-volume capacity', 'Safe transportation', 'Direct-to-site delivery'],
-  'energy-consulting': ['Fuel management advisory', 'Energy optimisation', 'Cost reduction strategies', 'Corporate & government'],
+  'energy-consulting': ['Diesel management advisory', 'Energy optimisation', 'Cost reduction strategies', 'Corporate & government'],
   'procurement-logistics': ['Sourcing & procurement', 'Transport coordination', 'Delivery management', 'Tailored supply chains'],
 };
 
@@ -168,7 +168,7 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
             Our Services Include
           </h2>
           <p className="text-sm text-brand-muted max-w-lg mx-auto leading-relaxed">
-            From fuel supply to logistics and energy consulting — we cover every aspect of your petroleum needs.
+            From diesel supply to logistics and energy consulting — we cover every aspect of your petroleum needs.
           </p>
         </motion.div>
 

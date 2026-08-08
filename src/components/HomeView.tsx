@@ -22,7 +22,7 @@ export default function HomeView({
   const highlightedServices = SERVICES_DATA.slice(0, 3);
 
   const steps = [
-    { number: '01', title: 'Contact & Consultation', desc: 'Reach out to discuss your energy requirements. Our team provides expert consultation on the best fuel solutions for your needs.' },
+    { number: '01', title: 'Contact & Consultation', desc: 'Reach out to discuss your energy requirements. Our team provides expert consultation on the best diesel solutions for your needs.' },
     { number: '02', title: 'Quote & Agreement', desc: 'Receive a competitive quote tailored to your volume and delivery requirements. We ensure transparent pricing and flexible terms.' },
     { number: '03', title: 'Delivery & Support', desc: 'Enjoy reliable, timely delivery to your location with 24-hour customer support and same-day delivery options for urgent needs.' },
   ];
@@ -66,11 +66,6 @@ export default function HomeView({
               transition={{ duration: 0.6 }}
               className="lg:col-span-7 space-y-8 max-w-2xl"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 text-brand-accent text-xs font-semibold uppercase tracking-wider border border-brand-accent/20 backdrop-blur-sm">
-                <span className="h-2 w-2 bg-brand-accent animate-pulse" />
-                Established 2024 • CAC Reg: 7830522
-              </div>
-
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08]">
                 Reliable Energy Solutions.
                 <br />
@@ -314,7 +309,7 @@ export default function HomeView({
               <span className="block text-xs font-bold uppercase tracking-widest text-brand-accent">Our Credibility</span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-brand-dark">Why Choose Us</h2>
               <p className="text-sm text-brand-muted leading-relaxed">
-                Primo Energy combines quality petroleum products with dependable logistics and outstanding customer service. We are committed to delivering fuel safely, promptly, and at competitive prices, helping businesses operate without interruption.
+                Primo Energy combines quality petroleum products with dependable logistics and outstanding customer service. We are committed to delivering diesel safely, promptly, and at competitive prices, helping businesses operate without interruption.
               </p>
 
               <div className="space-y-3 pt-2">
@@ -479,7 +474,7 @@ export default function HomeView({
 
               <div className="space-y-4 text-sm text-brand-muted leading-relaxed">
                 <p>
-                  <strong className="text-brand-dark">Reliable Fuel Supply:</strong> We ensure consistent delivery of high-quality petroleum products to keep your operations running smoothly without interruption.
+                  <strong className="text-brand-dark">Reliable Diesel Supply:</strong> We ensure consistent delivery of high-quality petroleum products to keep your operations running smoothly without interruption.
                 </p>
                 <p>
                   <strong className="text-brand-dark">Competitive Pricing:</strong> Our market-competitive wholesale pricing and bulk supply capability help businesses optimize their energy costs.
