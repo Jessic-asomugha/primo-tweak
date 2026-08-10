@@ -278,24 +278,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="relative h-96 bg-brand-darker overflow-hidden border-t border-white/10">
-        <img
-          src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"
-          alt="Topographical grid map"
-          className="w-full h-full object-cover opacity-30 filter grayscale scale-105"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-brand-darker/40" />
-        <div className="absolute inset-0 flex items-center justify-center p-4">
-          <div className="bg-brand-darker/95 border border-white/10 p-6 shadow-2xl max-w-sm text-white backdrop-blur-sm">
-            <span className="block text-[10px] font-mono tracking-widest text-brand-accent uppercase">Head Office Location</span>
-            <h4 className="font-display text-lg font-bold mt-1">Abuja, FCT — Nigeria</h4>
-            <p className="text-xs text-gray-400 mt-2">Federal Capital Territory</p>
-            <span className="block text-[10px] text-brand-accent mt-2 font-mono">// Service Coverage: Active</span>
-          </div>
-        </div>
-      </section>
+      {/* Map removed as requested */}
 
     </div>
   );

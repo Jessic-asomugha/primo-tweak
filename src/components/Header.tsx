@@ -31,7 +31,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
   };
 
   return (
-    <header className={`sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-gray-100' : 'bg-white border-b border-gray-50'}`}>
+    <header className={`sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'bg-white/40 backdrop-blur-md shadow-md border-b border-white/10' : 'bg-transparent'}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
 

@@ -184,7 +184,6 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
           {SERVICES_DATA.map((service, index) => {
             const Icon = getIcon(service.iconName);
             const isGrey = index % 2 === 0;
-            const isImageRight = index % 2 === 0;
             const bgClass = isGrey ? 'bg-gray-50' : 'bg-[#faf7f2]';
 
             return (
@@ -199,33 +198,65 @@ export default function ServicesView({ onRequestQuoteWithService }: ServicesView
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-center">
 
-                    {/* Text — left on even rows, right on odd rows */}
-                    <div className={isImageRight ? 'order-2 md:order-1 space-y-3' : 'space-y-3'}>
-                      <div className="flex items-center gap-3">
-                        <div className="h-11 w-11 flex items-center justify-center bg-brand-accent">
-                          <Icon className="h-5 w-5 text-white" />
+                    {index % 2 === 0 ? (
+                      <>
+                        {/* Text left, Image right */}
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="h-11 w-11 flex items-center justify-center bg-brand-accent">
+                              <Icon className="h-5 w-5 text-white" />
+                            </div>
+                            <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-mono">{service.category}</span>
+                          </div>
+                          <h3 className="font-display text-2xl font-bold text-brand-dark leading-tight">{service.title}</h3>
+                          <p className="text-sm text-brand-muted leading-relaxed">{service.description}</p>
+                          <button
+                            onClick={() => setDetailService(service)}
+                            className="inline-flex items-center gap-2 text-sm font-bold text-brand-accent hover:text-brand-dark transition-colors group/btn"
+                          >
+                            Learn More
+                            <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                          </button>
                         </div>
-                        <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-mono">{service.category}</span>
-                      </div>
-                      <h3 className="font-display text-2xl font-bold text-brand-dark leading-tight">{service.title}</h3>
-                      <p className="text-sm text-brand-muted leading-relaxed">{service.description}</p>
-                      <button
-                        onClick={() => setDetailService(service)}
-                        className="inline-flex items-center gap-2 text-sm font-bold text-brand-accent hover:text-brand-dark transition-colors group/btn"
-                      >
-                        Learn More
-                        <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </button>
-                    </div>
 
-                    {/* Image — right on even rows, left on odd rows */}
-                    <div className={isImageRight ? 'overflow-hidden aspect-[4/3] order-1 md:order-2' : 'overflow-hidden aspect-[4/3]'}>
-                      <img
-                        src={service.imageUrl}
-                        alt={service.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                      />
-                    </div>
+                        <div className="overflow-hidden aspect-[4/3]">
+                          <img
+                            src={service.imageUrl}
+                            alt={service.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                          />
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        {/* Image left, Text right */}
+                        <div className="overflow-hidden aspect-[4/3]">
+                          <img
+                            src={service.imageUrl}
+                            alt={service.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                          />
+                        </div>
+
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="h-11 w-11 flex items-center justify-center bg-brand-accent">
+                              <Icon className="h-5 w-5 text-white" />
+                            </div>
+                            <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-mono">{service.category}</span>
+                          </div>
+                          <h3 className="font-display text-2xl font-bold text-brand-dark leading-tight">{service.title}</h3>
+                          <p className="text-sm text-brand-muted leading-relaxed">{service.description}</p>
+                          <button
+                            onClick={() => setDetailService(service)}
+                            className="inline-flex items-center gap-2 text-sm font-bold text-brand-accent hover:text-brand-dark transition-colors group/btn"
+                          >
+                            Learn More
+                            <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                          </button>
+                        </div>
+                      </>
+                    )}
 
                   </div>
                 </div>

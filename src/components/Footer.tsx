@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Check, Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Check, Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 function TikTokIcon({ className }: { className?: string }) {
   return (
