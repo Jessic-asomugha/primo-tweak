@@ -27,6 +27,20 @@ body {
   line-height: 1.6;
 }
 
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+
+  .hero-actions button {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

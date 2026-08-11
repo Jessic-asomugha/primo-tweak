@@ -17,7 +17,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'We provide comprehensive petroleum product supply including diesel, petrol (PMS), kerosene (DPK), and other refined products. Our products are sourced from certified depots and delivered with strict quality control measures.',
     iconName: 'Droplet',
     category: 'supply',
-    imageUrl: '/manufacturing.jpg'
+    imageUrl: '/petroleum-products-supply.jpg'
   },
   {
     id: 'bulk-fuel-delivery',
@@ -44,7 +44,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'We offer efficient procurement and logistics solutions for petroleum-related products. Our team handles sourcing, transportation coordination, and delivery management to ensure businesses receive reliable supply chain solutions tailored to their specific needs.',
     iconName: 'Package',
     category: 'logistics',
-    imageUrl: '/pexels-ezrah-lane-3654374-5693845.jpg'
+    imageUrl: '/logistics.jpg'
   }
 ];
 
@@ -70,7 +70,7 @@ export const ACCOMPLISHMENTS_DATA: Accomplishment[] = [
     title: 'Trusted Industry Partner',
     description: 'Established as a preferred supplier for construction companies, manufacturing industries, hospitals, schools, and government agencies through consistent quality delivery.',
     location: 'Nigeria',
-    imageUrl: '/manufacturing.jpg',
+    imageUrl: '/industry-partner.jpg',
     year: '2024'
   }
 ];
@@ -80,8 +80,8 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     id: 't1',
     name: 'Operations Manager',
     role: 'Operations Manager',
-    company: 'Abuja-based Manufacturing Company',
-    quote: 'Primo Energy has consistently delivered quality diesel on time. Their professionalism and reliability have made them our preferred supplier.',
+    company: 'primo energy oil & gas co. ltd',
+    quote: 'Primo Energy has consistently delivered quality diesel on time. our professionalism and reliability have made us a preferred supplier across multiple sectors.',
     avatarUrl: 'https://images.pexels.com/photos/33048698/pexels-photo-33048698.jpeg?auto=compress&cs=tinysrgb&h=150&w=150&q=80'
   }
 ];

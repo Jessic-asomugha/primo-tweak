@@ -70,7 +70,7 @@ export default function ContactView({ onBackToHome }: ContactViewProps) {
       <section className="relative min-h-[72vh] overflow-hidden border-b border-gray-200">
         <div className="absolute inset-0">
           <img
-            src="/sven-brandsma-YnSWpIPX3pE-unsplash.jpg"
+            src="/contact-us.jpg"
             alt="Contact hero background"
             className="w-full h-full object-cover"
           />

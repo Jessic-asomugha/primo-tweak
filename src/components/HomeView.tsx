@@ -76,7 +76,7 @@ export default function HomeView({
                 Primo Energy Oil &amp; Gas Co. Limited delivers high-quality petroleum products and energy solutions to businesses, industries, institutions, and households across Nigeria.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="hero-actions flex flex-row flex-wrap items-center gap-3 pt-2">
                 <button
                   onClick={onRequestQuote}
                   className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-4 px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 group text-sm"
@@ -258,9 +258,17 @@ export default function HomeView({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-accent/30 transition-all duration-300 flex flex-col justify-between group"
+                  className="bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-accent/30 transition-all duration-300 flex flex-col justify-between group"
                 >
-                  <div>
+                  <div className="relative h-48 overflow-hidden bg-gray-100">
+                    <img
+                      src={service.imageUrl}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </div>
+                  <div className="p-8 flex flex-col flex-1">
                     <div className="h-14 w-14 bg-brand-light group-hover:bg-brand-accent group-hover:text-white flex items-center justify-center text-brand-accent mb-6 transition-all duration-300">
                       <IconComponent className="h-7 w-7" />
                     </div>
@@ -270,14 +278,14 @@ export default function HomeView({
                     <p className="text-sm text-brand-muted leading-relaxed mb-6">
                       {service.description}
                     </p>
+                    <button
+                      onClick={onNavigateToServices}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-accent hover:text-brand-dark transition-colors mt-auto group/btn"
+                    >
+                      Discover Scope
+                      <ArrowRight className="h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
                   </div>
-                  <button
-                    onClick={onNavigateToServices}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-accent hover:text-brand-dark transition-colors mt-auto group/btn"
-                  >
-                    Discover Scope
-                    <ArrowRight className="h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
                 </motion.div>
               );
             })}
@@ -346,7 +354,7 @@ export default function HomeView({
                 />
               </div>
               <div className="absolute top-6 right-6 bg-brand-dark/95 text-white px-5 py-3 text-xs font-mono border border-white/10 shadow-xl backdrop-blur-sm">
-                <span>ESTABLISHED: 14 AUGUST 2024</span>
+                <span>ESTABLISHED COMPANY</span>
               </div>
             </motion.div>
           </motion.div>
@@ -385,9 +393,9 @@ export default function HomeView({
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                  <span className="absolute top-4 right-4 bg-brand-accent text-white font-mono text-xs font-bold px-3 py-1.5 z-10 shadow-lg">
-                    {item.year}
-                  </span>
+                  <div className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-green-600/90 text-white shadow-lg">
+                    <CheckCircle2 className="h-6 w-6" />
+                  </div>
                 </div>
                 <div className="p-7 bg-white space-y-3">
                   <span className="block text-[10px] font-bold text-brand-accent tracking-wider uppercase">{item.location}</span>
@@ -410,9 +418,9 @@ export default function HomeView({
             variants={sectionFadeIn}
             className="text-center max-w-xl mx-auto mb-16 space-y-3"
           >
-            <span className="block text-xs font-bold uppercase tracking-widest text-brand-accent">Client Testimonials</span>
+            <span className="block text-xs font-bold uppercase tracking-widest text-brand-accent">A word from the manager</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white">
-              Trusted by Nigerian Businesses
+              Manager's comment
             </h2>
             <p className="text-sm text-gray-400">
               Primo Energy serves diverse industries across Nigeria with reliable petroleum products and energy solutions.
@@ -430,17 +438,10 @@ export default function HomeView({
                 className="p-8 transition-all duration-300 border relative bg-white/5 border-white/10 hover:border-brand-accent/30 hover:-translate-y-1 backdrop-blur-sm"
               >
                 <Quote className="absolute top-7 right-7 h-10 w-10 text-brand-accent/15" />
-                <div className="flex items-center gap-4 mb-6">
-                  <img
-                    src={t.avatarUrl}
-                    alt={t.name}
-                    className="h-14 w-14 object-cover border-2 border-brand-accent/30 shadow-md"
-                  />
-                  <div>
-                    <h4 className="font-display text-sm font-bold text-white">{t.name}</h4>
-                    <span className="block text-xs text-brand-accent font-medium">{t.role}</span>
-                    <span className="block text-[10px] text-gray-400 font-mono">{t.company}</span>
-                  </div>
+                <div className="mb-6">
+                  <h4 className="font-display text-sm font-bold text-white">{t.name}</h4>
+                  <span className="block text-xs text-brand-accent font-medium">{t.role}</span>
+                  <span className="block text-[10px] text-gray-400 font-mono">{t.company}</span>
                 </div>
                 <p className="text-sm text-gray-300 leading-relaxed italic">
                   &ldquo;{t.quote}&rdquo;

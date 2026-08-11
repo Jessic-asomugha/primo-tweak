@@ -41,18 +41,11 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
             className="flex items-center gap-3 cursor-pointer"
           >
             <img
-              src="/primo_energy_oil_gas_logo_corrected.svg"
+              src="/primo_energy_horizontal_orange_flame.svg"
               alt="Primo Energy logo"
               className="h-11 w-auto"
             />
-            <div className="hidden sm:block">
-              <span className="font-display text-2xl font-bold tracking-tight text-brand-dark">
-                Primo<span className="text-brand-accent">.</span>
-              </span>
-              <span className="block text-[9px] font-semibold tracking-[0.18em] text-brand-muted uppercase -mt-0.5">
-                Energy Oil &amp; Gas Co. Ltd
-              </span>
-            </div>
+
           </div>
 
           {/* Desktop Nav Items */}
