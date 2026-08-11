@@ -8,7 +8,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'We supply premium Automotive Gas Oil (AGO) to ensure your operations run smoothly. Our diesel meets the highest quality standards and is delivered reliably to your location. Best for factories, hotels, hospitals, estates, offices, and construction companies.',
     iconName: 'Fuel',
     category: 'supply',
-    imageUrl: '/construction.jpg'
+    imageUrl: '/diesel-supply-ago.jpg'
   },
   {
     id: 'petroleum-products',
@@ -26,7 +26,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'Our bulk fuel delivery service ensures safe and timely transportation of petroleum products directly to your location. We have the capacity to handle large-volume orders for manufacturing companies, institutions, and large businesses with our fleet of specialized tankers.',
     iconName: 'Truck',
     category: 'logistics',
-    imageUrl: '/pexels-thisisengineering-3862384.jpg'
+    imageUrl: '/bulk-fuel.jpg'
   },
   {
     id: 'energy-consulting',
@@ -35,7 +35,7 @@ export const SERVICES_DATA: Service[] = [
     longDescription: 'Our energy consulting services provide professional advisory on fuel management, energy optimisation strategies, and cost-effective energy solutions. We help corporate organisations and government agencies optimise their energy consumption and reduce operational costs.',
     iconName: 'Lightbulb',
     category: 'consulting',
-    imageUrl: '/why-choose-us.jpg'
+    imageUrl: '/energy-consulting.jpg'
   },
   {
     id: 'procurement-logistics',
