@@ -44,11 +44,23 @@ export default function Footer({ onNav }: FooterProps) {
               Primo Energy Oil &amp; Gas Co. Limited is a Nigerian energy company committed to delivering high-quality petroleum products and energy solutions to businesses, industries, institutions, and households.
             </p>
 
-            <div className="pt-2 text-xs text-gray-500">
-              &copy; {currentYear} Primo Energy Oil &amp; Gas Co. Limited. All rights reserved.
-              <span className="block mt-1 font-mono">CAC Registration No: 7830522</span>
+            <div className="flex items-center gap-3 pt-2">
+              <a href="https://facebook.com/PrimoEnergyOilandGas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Facebook" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="https://instagram.com/primoenergyoilandgas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Instagram" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="https://tiktok.com/@primoenergy20" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on TikTok" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+                <TikTokIcon className="h-4 w-4" />
+              </a>
+              <a href="https://linkedin.com/company/primo-energy-oil-gas-co-limited" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on LinkedIn" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
+                <Linkedin className="h-4 w-4" />
+              </a>
             </div>
           </div>
+
+
 
           {/* Column 2: Quick Navigations */}
           <div className="space-y-5">
@@ -110,21 +122,13 @@ export default function Footer({ onNav }: FooterProps) {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 pt-2">
-              <a href="https://facebook.com/PrimoEnergyOilandGas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Facebook" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a href="https://instagram.com/primoenergyoilandgas" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on Instagram" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
-                <Instagram className="h-4 w-4" />
-              </a>
-              <a href="https://tiktok.com/@primoenergy20" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on TikTok" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
-                <TikTokIcon className="h-4 w-4" />
-              </a>
-              <a href="https://linkedin.com/company/primo-energy-oil-gas-co-limited" target="_blank" rel="noopener noreferrer" aria-label="Primo Energy on LinkedIn" className="h-10 w-10 bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-accent hover:border-brand-accent/30 hover:-translate-y-0.5 transition-all">
-                <Linkedin className="h-4 w-4" />
-              </a>
+             <div className="pt-2 text-xs text-gray-500">
+              &copy; {currentYear} Primo Energy Oil &amp; Gas Co. Limited. All rights reserved.
+              <span className="block mt-1 font-mono">CAC Registration No: 7830522</span>
             </div>
           </div>
+
+
 
         </div>
       </div>
